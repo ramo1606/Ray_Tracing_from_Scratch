@@ -92,6 +92,9 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\GeometricObjects\;$(ProjectDir)src\Tracers\;$(ProjectDir)src\Utilities\;$(ProjectDir)src\World\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -106,6 +109,9 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\GeometricObjects\;$(ProjectDir)src\Tracers\;$(ProjectDir)src\Utilities\;$(ProjectDir)src\World\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -120,6 +126,9 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\GeometricObjects\;$(ProjectDir)src\Tracers\;$(ProjectDir)src\Utilities\;$(ProjectDir)src\World\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -134,6 +143,9 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\GeometricObjects\;$(ProjectDir)src\Tracers\;$(ProjectDir)src\Utilities\;$(ProjectDir)src\World\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -143,7 +155,37 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\GeometricObjects\geometric_object.cpp" />
+    <ClCompile Include="src\GeometricObjects\sphere.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Tracers\single_sphere.cpp" />
+    <ClCompile Include="src\Tracers\tracer.cpp" />
+    <ClCompile Include="src\Utilities\color.cpp" />
+    <ClCompile Include="src\Utilities\matrix.cpp" />
+    <ClCompile Include="src\Utilities\normal.cpp" />
+    <ClCompile Include="src\Utilities\point3.cpp" />
+    <ClCompile Include="src\Utilities\ray.cpp" />
+    <ClCompile Include="src\Utilities\shade_rec.cpp" />
+    <ClCompile Include="src\Utilities\vector3.cpp" />
+    <ClCompile Include="src\World\view_plane.cpp" />
+    <ClCompile Include="src\World\world.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\GeometricObjects\geometric_object.h" />
+    <ClInclude Include="src\GeometricObjects\sphere.h" />
+    <ClInclude Include="src\Tracers\single_sphere.h" />
+    <ClInclude Include="src\Tracers\tracer.h" />
+    <ClInclude Include="src\Utilities\color.h" />
+    <ClInclude Include="src\Utilities\constants.h" />
+    <ClInclude Include="src\Utilities\maths.h" />
+    <ClInclude Include="src\Utilities\matrix.h" />
+    <ClInclude Include="src\Utilities\normal.h" />
+    <ClInclude Include="src\Utilities\point3.h" />
+    <ClInclude Include="src\Utilities\ray.h" />
+    <ClInclude Include="src\Utilities\shade_rec.h" />
+    <ClInclude Include="src\Utilities\vector3.h" />
+    <ClInclude Include="src\World\view_plane.h" />
+    <ClInclude Include="src\World\world.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
